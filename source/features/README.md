@@ -4,7 +4,9 @@ Here is the basic list and explaination of Maple Mono ligatures and features.
 
 For more details, please check out `.fea` files and [OpenType Feature Spec](https://adobe-type-tools.github.io/afdko/OpenTypeFeatureFileSpecification.html).
 
-### calt
+## Ligatures
+
+in `calt`:
 
 ```
 {{
@@ -26,7 +28,6 @@ For more details, please check out `.fea` files and [OpenType Feature Spec](http
 ...
 ..<
 <!--
-<<-
 <-
 <#--
 <>
@@ -42,12 +43,10 @@ For more details, please check out `.fea` files and [OpenType Feature Spec](http
 ||>
 |>
 -|
-->>
 -->
 ->
 >=
 <=
-<<=
 <==
 !=
 !!
@@ -94,7 +93,6 @@ __
 <-|
 <=|
 |=>
->-
 <~
 ~~
 <~>
@@ -143,15 +141,17 @@ fixme))
 \\
 ```
 
-#### Notice
+### Notice
 
 - `>>` / `>>>` is much contextual-sensitive
+
+## Features
 
 ### Character Varients (cvXX)
 
 - zero: `0` with dot style
 - cv01: `@ $ & % Q => ->` without gap
-- cv02: `a` with top arm
+- cv02: `a` with top arm, no effect on italic `a`
 - cv03: `i` without left bottom bar
 - cv04: `l` with left bottom bar, like consolas, will be overrided by cv35 in italic style
 
@@ -161,11 +161,13 @@ fixme))
 - cv33: italic `i j` with left bottom bar and horizen top bar, just like regular style
 - cv34: italic `k` without circle, just like regular style
 - cv35: italic `l` without tail, just like regular style
-- cv36: italic `x` without tail, just like regular style
+- cv36: italic `x` without tails, just like regular style
 
 #### CN Only
 
-- cv98: Full width `…`(ellipsis) and `—`(emdash)
+- cv96: Full width `“`(double quote left), `”`(double quote right), `‘`(single quote left), `’`(single quote right)
+- cv97: Full width `…`(ellipsis)
+- cv98: Full width `—`(emdash)
 - cv99: Traditional punctuations
 
 ### Style Sets (ssXX)
